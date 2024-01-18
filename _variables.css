@@ -1,0 +1,24 @@
+:root {
+  --color-text-base: #f4f4f4;
+  --color-text-active: #00a3e0; /* #00AEEF, */
+  --color-text-hover: #00a3e0;
+  --color-link: #00aef3;
+  --color-link-hover: #aaaaaa;
+
+  --color-bg-base: #161616;
+  --color-bg-container: #2b2b2b;
+  --color-bg-header: #1a1e1f;
+  --color-bg-header-secondary: #222222f2;
+
+  --font-size-s: 0.8rem;
+  --font-size-m: 0.9rem;
+  --font-size-l: 1.4rem;
+  --font-size-xl: 1.75rem;
+
+  --space-s: 12px;
+  --space-m: 16px;
+  --space-l: 20px;
+  --space-xl: 24px;
+  --space-2xl: 28px;
+  --space-3xl: 64px;
+}

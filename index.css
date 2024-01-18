@@ -1,0 +1,34 @@
+@import url("/_variables.css");
+@import url("/styles/Header.css");
+@import url("/styles/Footer.css");
+@import url("/styles/First_Section.css");
+@import url("/styles/Second_Secion.css");
+@import url("/styles/Third_Section.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-bg-base);
+  color: var(--color-text-base);
+}
+
+.page-container {
+  /* width: calc(100% - 80px); */
+  /* padding: 84px 0 0 0; */
+  margin: 0 auto;
+}
+.page-content {
+  width: 100%;
+}
+.content-position {
+  width: calc(100% - 550px);
+}
+
+.bg-opacity {
+  background-color: var(--color-bg-header-secondary);
+  transition: background-color 0.3s ease-in-out;
+}
