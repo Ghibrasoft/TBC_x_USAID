@@ -26,6 +26,10 @@ body {
 }
 .content-position {
   width: calc(100% - 550px);
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto; */
 }
 
 .bg-opacity {

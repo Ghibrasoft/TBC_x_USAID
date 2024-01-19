@@ -12,8 +12,7 @@
 }
 .cover-img {
   width: 100%;
-  height: 350px;
-  /* object-fit: cover; */
+  object-fit: cover;
 }
 .first-section-top-title-wrapper {
   position: absolute;
@@ -41,7 +40,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--space-2xl);
-  padding: var(--space-3xl) 0;
+  padding: var(--space-4xl) 0;
 }
 .first-section-bottom-desc {
   font-size: var(--font-size-xl);
@@ -51,8 +50,8 @@
   text-decoration: none;
   color: var(--color-link);
   font-size: var(--font-size-l);
-  transition: color 0.2s ease-in;
   font-weight: bold;
+  transition: color 0.2s ease-in;
 }
 .first-section-bottom .first-section-bottom-content > a:hover {
   color: var(--color-link-hover);
