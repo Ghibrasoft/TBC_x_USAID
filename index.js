@@ -66,7 +66,7 @@ fetch("./db/cards-data.json")
   })
   .catch((error) => console.error(error));
 
-// collapse
+// collapse functionality
 function collapseHandler(contentId) {
   const content = document.getElementById(contentId);
   const arrowDownIcon = content.previousElementSibling.querySelector("img");

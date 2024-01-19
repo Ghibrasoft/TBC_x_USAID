@@ -15,6 +15,40 @@ body {
   background-color: var(--color-bg-base);
   color: var(--color-text-base);
 }
+/* style the scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: var(--color-link-hover);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-link-alt);
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-link-alt-hover);
+}
+
+::selection {
+  background-color: var(--color-text-active);
+  color: var(--color-text-base);
+}
+
+/* firefox */
+::-moz-selection {
+  background-color: var(--color-text-active);
+  color: var(--color-text-base);
+}
+
+/* webKit/blink */
+::-webkit-selection {
+  background-color: var(--color-text-active);
+  color: var(--color-text-base);
+}
 
 .page-container {
   /* width: calc(100% - 80px); */
