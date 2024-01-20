@@ -1,0 +1,97 @@
+.footer-container {
+  background-color: var(--color-bg-container);
+  margin-top: var(--space-4xl);
+}
+.footer-container .footer-container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-2xl);
+  padding: var(--space-4xl) 0;
+}
+.footer-container
+  .footer-container-content
+  .footer-container-content-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* content top */
+.footer-container .footer-container-content .footer-container-content-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer-container-content-top-left {
+  width: 106px;
+  height: 30px;
+}
+.footer-container
+  .footer-container-content
+  .footer-container-content-top
+  .footer-container-content-top-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-s);
+}
+.footer-container
+  .footer-container-content
+  .footer-container-content-top
+  .footer-container-content-top-right
+  img {
+  cursor: pointer;
+  width: 39px;
+  height: 39px;
+}
+/* content bottom */
+.footer-container-content-bottom-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--space-xs);
+}
+.footer-container-content-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+.footer-container-content-bottom .footer-container-content-bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer-container-content-bottom .footer-container-content-bottom-actions a {
+  cursor: pointer;
+  outline: none;
+  text-decoration: none;
+  color: var(--color-text-base);
+  transition: 0.3s ease-out;
+}
+.footer-container-content-bottom
+  .footer-container-content-bottom-actions
+  a:hover {
+  color: var(--color-link-hover);
+  transition: 0.3s ease-out;
+}
+.footer-container-content-bottom
+  .footer-container-content-bottom-actions
+  button {
+  cursor: pointer;
+  font-size: var(--font-size-m);
+  padding: 6px var(--space-2xl);
+  border-radius: var(--border-radius-under-m);
+  outline: none;
+  background-color: var(--color-link);
+  color: var(--color-text-base);
+  transition: 0.3s ease-out;
+}
+.footer-container-content-bottom
+  .footer-container-content-bottom-actions
+  button:hover {
+  color: #000;
+  background-color: var(--color-text-base);
+  transition: 0.3s ease-out;
+}
