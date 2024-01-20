@@ -11,11 +11,16 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--color-bg-base);
   color: var(--color-text-base);
 }
-/* style the scrollbar */
+
+/* custom thin scrollbar */
 ::-webkit-scrollbar {
   width: 4px;
 }
@@ -66,7 +71,7 @@ body {
   margin: 0 auto; */
 }
 
-.bg-opacity {
+.header-bg-secondary {
   background-color: var(--color-bg-header-secondary);
   transition: background-color 0.3s ease-in-out;
 }

@@ -5,9 +5,9 @@ function changeHeaderBg() {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
   if (scrollPosition > 0) {
-    header.classList.add("bg-opacity");
+    header.classList.add("header-bg-secondary");
   } else {
-    header.classList.remove("bg-opacity");
+    header.classList.remove("header-bg-secondary");
   }
 }
 

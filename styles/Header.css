@@ -14,6 +14,13 @@
   height: inherit;
   margin: 0 auto;
 }
+.navbar-left-logo {
+  cursor: pointer;
+}
+.navbar-left-logo img {
+  width: 182px;
+  height: 40px;
+}
 /* .navbar-left-logo {} */
 .navbar-right-list {
   display: flex;
