@@ -37,3 +37,6 @@
   color: var(--color-text-hover);
   transition: color 0.2s ease-in;
 }
+.nav-link.active {
+  color: var(--color-text-active);
+}

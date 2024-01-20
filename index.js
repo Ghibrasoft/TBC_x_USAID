@@ -13,6 +13,17 @@ function changeHeaderBg() {
 
 window.addEventListener("scroll", changeHeaderBg);
 
+// active nav tabs
+const navLinks = document.querySelectorAll(".nav-link");
+
+navLinks.forEach((navLink) => {
+  navLink.addEventListener("click", () => {
+    navLinks.forEach((link) => link.classList.remove("active"));
+
+    navLink.classList.add("active");
+  });
+});
+
 // dynamically append learning courses
 fetch("./db/cards-data.json")
   .then((res) => res.json())
