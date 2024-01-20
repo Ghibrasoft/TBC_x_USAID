@@ -3,7 +3,39 @@
   flex-direction: column;
   align-items: center;
 }
-
+/* top content */
+.third-section-container-content-top {
+  background-color: var(--color-bg-container);
+  margin: var(--space-4xl) auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.third-section-container-carousel-wrapper {
+  width: 1000px;
+}
+.third-section-container-carousel {
+  display: grid;
+  grid-auto-flow: column;
+  scroll-behavior: auto;
+  gap: var(--space-4xl);
+  overflow-y: auto;
+  overscroll-behavior-x: contain;
+  scroll-snap-type: x-mandatory;
+  scrollbar-width: none;
+}
+.third-section-container-carousel::-webkit-scrollbar {
+  display: none;
+}
+.third-section-container-carousel-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-snap-align: start;
+  border-radius: 30px;
+  min-height: 200px;
+  min-width: 500px;
+}
 /* bottom content (FAQ) */
 .third-section-container-content-bottom {
   display: flex;
