@@ -66,3 +66,78 @@ body {
   background-color: var(--color-bg-header-secondary);
   transition: background-color 0.3s ease-in-out;
 }
+
+/* carousel style */
+.carousel-wrapper {
+  width: 90%;
+  margin: 0px auto;
+  padding: var(--space-4xl) 0;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.slider {
+  display: flex;
+  height: 100%;
+  /* width: 700%; */
+  transition: all 0.3s ease-in;
+}
+.slider article {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 0 0 33.33%;
+  /* flex-basis: 100%; */
+}
+
+/* nav arrows */
+.controls .arrow {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.controls .arrow svg {
+  fill: var(--color-svg-base);
+}
+.controls .arrow:hover svg {
+  fill: var(--color-svg-hover);
+}
+.arrow.left {
+  left: 0;
+}
+.arrow.right {
+  right: 0;
+}
+
+/* nav dots */
+.controls ul {
+  position: absolute;
+  display: flex;
+  gap: var(--space-s);
+  list-style: none;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+.controls ul li {
+  cursor: pointer;
+  display: flex;
+  width: var(--dot-size-s);
+  height: var(--dot-size-s);
+  background-color: var(--color-link-hover);
+  border-radius: 50%;
+}
+.controls ul li.selected-dot {
+  background-color: var(--color-text-base);
+}
+/* animation */
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}

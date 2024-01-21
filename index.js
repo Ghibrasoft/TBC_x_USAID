@@ -74,24 +74,38 @@ fetch("./db/cards-data.json")
   })
   .catch((error) => console.error(error));
 
-// carousel functionality
-const carousel = document.querySelector(".third-section-container-carousel");
-let currIndex = 0;
+// carousel
+const slider = document.querySelector(".slider");
+const leftArrow = document.querySelector(".left");
+const rightArrow = document.querySelector(".right");
+const dotParent = document.querySelector(".controls ul");
+var slideIndex = 0;
 
-function refreshCarousel() {
-  const translateVal = `-${currIndex * 33.33}%`;
-  carousel.style.transform = `translateX(${translateVal})`;
-}
-function showNextSlide() {
-  currIndex += 3;
-  if (currIndex >= carousel.children.length) {
-    currIndex = 0;
-  }
-  refreshCarousel();
-}
-setInterval(() => {
-  showNextSlide();
-}, 3000);
+const setIndexHandler = () => {
+  document
+    .querySelector(".controls .selected-dot")
+    .classList.remove("selected-dot");
+  slider.style.transform = "translate(" + slideIndex * -100 + "%)";
+};
+
+document.querySelectorAll(".controls li").forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    slideIndex = index;
+    setIndexHandler();
+    dot.classList.add("selected-dot");
+  });
+});
+
+leftArrow.addEventListener("click", () => {
+  slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
+  setIndexHandler();
+  dotParent.children[slideIndex].classList.add("selected-dot");
+});
+rightArrow.addEventListener("click", () => {
+  slideIndex = slideIndex < 3 - 1 ? slideIndex + 1 : 3 - 1;
+  setIndexHandler();
+  dotParent.children[slideIndex].classList.add("selected-dot");
+});
 
 // collapse functionality
 function collapseHandler(contentId) {

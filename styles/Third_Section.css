@@ -1,7 +1,7 @@
 .third-section-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: center; */
   overflow: hidden;
 }
 /* top content */
@@ -13,7 +13,7 @@
   align-items: center;
   gap: var(--space-2xl);
   margin: var(--space-4xl) auto;
-  padding: var(--space-3xl) 0;
+  padding: var(--space-2xl) 0;
   background-color: var(--color-bg-container);
 }
 .third-section-container
@@ -22,55 +22,6 @@
   .third-section-container-content-top-title {
   font-size: var(--font-size-xl);
   font-weight: lighter;
-}
-.third-section-container
-  .third-section-container-content
-  .third-section-container-content-top
-  .third-section-container-carousel-wrapper {
-  overflow: hidden;
-  position: relative;
-  padding: var(--space-4xl) 0;
-  width: 100%;
-}
-.third-section-container
-  .third-section-container-content
-  .third-section-container-content-top
-  .third-section-container-carousel-wrapper
-  .third-section-container-carousel {
-  display: flex;
-  animation: fade 3s ease-out infinite;
-}
-.third-section-container
-  .third-section-container-content
-  .third-section-container-content-top
-  .third-section-container-carousel-wrapper
-  .third-section-container-carousel::-webkit-scrollbar {
-  display: none;
-}
-.third-section-container
-  .third-section-container-content
-  .third-section-container-content-top
-  .third-section-container-carousel-wrapper
-  .third-section-container-carousel
-  .third-section-container-carousel-card {
-  display: flex;
-  align-items: center;
-  flex: 0 0 33.33%;
-  box-sizing: border-box;
-  padding: 0 10px;
-}
-.third-section-container
-  .third-section-container-content
-  .third-section-container-content-top
-  .third-section-container-carousel-wrapper
-  .third-section-container-carousel
-  .third-section-container-carousel-card
-  img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  margin: 0 auto;
-  animation: fade 3s ease-out infinite;
 }
 
 /* bottom content (FAQ) */
@@ -116,14 +67,4 @@
 }
 .collapse-item-question img {
   transition: transform 0.3s ease;
-}
-
-/* animation */
-@keyframes fade {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
 }
