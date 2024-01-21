@@ -16,8 +16,8 @@ html {
 }
 
 body {
-  background-color: var(--color-bg-base);
   color: var(--color-text-base);
+  background-color: var(--color-bg-base);
 }
 
 /* custom thin scrollbar */
@@ -55,20 +55,11 @@ body {
   color: var(--color-text-base);
 }
 
-.page-container {
-  /* width: calc(100% - 80px); */
-  /* padding: 84px 0 0 0; */
-  margin: 0 auto;
-}
-.page-content {
+.content-width {
+  /* width: calc(100% - 550px); */
   width: 100%;
-}
-.content-position {
-  width: calc(100% - 550px);
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto; */
+  max-width: 980px;
+  margin: 0 auto;
 }
 
 .header-bg-secondary {

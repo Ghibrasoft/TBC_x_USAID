@@ -1,6 +1,5 @@
 // change header bg onScroll
 const header = document.getElementById("header");
-
 function changeHeaderBg() {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
@@ -10,12 +9,10 @@ function changeHeaderBg() {
     header.classList.remove("header-bg-secondary");
   }
 }
-
 window.addEventListener("scroll", changeHeaderBg);
 
 // active nav tabs
 const navLinks = document.querySelectorAll(".nav-link");
-
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", () => {
     navLinks.forEach((link) => link.classList.remove("active"));
@@ -41,7 +38,7 @@ fetch("./db/cards-data.json")
 
       card.className = "second-section-grid-container-card";
       cardContentWrapper.className =
-        "second-section-grid-container-card-content"; // Fix: Correct assignment
+        "second-section-grid-container-card-content";
       cardCover.className = "second-section-grid-container-card-cover";
       cardActionWrapper.className =
         "second-section-grid-container-card-action-wrapper";
@@ -76,6 +73,25 @@ fetch("./db/cards-data.json")
     });
   })
   .catch((error) => console.error(error));
+
+// carousel functionality
+const carousel = document.querySelector(".third-section-container-carousel");
+let currIndex = 0;
+
+function refreshCarousel() {
+  const translateVal = `-${currIndex * 33.33}%`;
+  carousel.style.transform = `translateX(${translateVal})`;
+}
+function showNextSlide() {
+  currIndex += 3;
+  if (currIndex >= carousel.children.length) {
+    currIndex = 0;
+  }
+  refreshCarousel();
+}
+setInterval(() => {
+  showNextSlide();
+}, 3000);
 
 // collapse functionality
 function collapseHandler(contentId) {

@@ -2,60 +2,73 @@
   margin-top: 84px;
   min-height: 100dvh;
 }
-
-.first-section-top {
+.first-section-container .first-section-top {
   position: relative;
 }
-
-.first-section-image-wrapper {
+.first-section-container .first-section-top .first-section-image-wrapper {
   width: 100%;
 }
-.cover-img {
+.first-section-container
+  .first-section-top
+  .first-section-image-wrapper
+  .cover-img {
   width: 100%;
   object-fit: cover;
 }
-.first-section-top-title-wrapper {
+.first-section-container .first-section-top .first-section-top-title-wrapper {
   position: absolute;
   top: 50%;
-  left: 0;
+  left: 275px;
   transform: translateY(-50%);
   color: var(--color-text-base);
 }
-.first-section-top-title-wrapper > h1 {
+.first-section-container
+  .first-section-top
+  .first-section-top-title-wrapper
+  > h1 {
   font-size: 42px;
   line-height: 1.6em;
 }
-.first-section-top-title-wrapper > h3 {
+.first-section-container
+  .first-section-top
+  .first-section-top-title-wrapper
+  > h3 {
   font-size: 34px;
   line-height: 1.6em;
 }
-
-.first-section-bottom {
+.first-section-container .first-section-bottom {
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: var(--color-bg-container);
 }
-.first-section-bottom-content {
+.first-section-container .first-section-bottom .first-section-bottom-content {
   display: flex;
   flex-direction: column;
   gap: var(--space-2xl);
   padding: var(--space-4xl) 0;
 }
-.first-section-bottom-content a {
+.first-section-container .first-section-bottom .first-section-bottom-content a {
   width: fit-content;
 }
-.first-section-bottom-desc {
+.first-section-container
+  .first-section-bottom
+  .first-section-bottom-content
+  .first-section-bottom-desc {
   font-size: var(--font-size-xl);
   line-height: 1.6em;
 }
-.first-section-bottom .first-section-bottom-content > a {
+.first-section-container .first-section-bottom .first-section-bottom-content a {
   text-decoration: none;
   color: var(--color-link);
   font-size: var(--font-size-l);
   font-weight: bold;
   transition: color 0.2s ease-in;
 }
-.first-section-bottom .first-section-bottom-content > a:hover {
+
+.first-section-container
+  .first-section-bottom
+  .first-section-bottom-content
+  a:hover {
   color: var(--color-link-hover);
 }

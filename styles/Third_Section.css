@@ -2,40 +2,77 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: hidden;
 }
 /* top content */
-.third-section-container-content-top {
-  background-color: var(--color-bg-container);
-  margin: var(--space-4xl) auto;
+.third-section-container
+  .third-section-container-content
+  .third-section-container-content-top {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: var(--space-2xl);
+  margin: var(--space-4xl) auto;
+  padding: var(--space-3xl) 0;
+  background-color: var(--color-bg-container);
 }
-.third-section-container-carousel-wrapper {
-  width: 1000px;
+.third-section-container
+  .third-section-container-content
+  .third-section-container-content-top
+  .third-section-container-content-top-title {
+  font-size: var(--font-size-xl);
+  font-weight: lighter;
 }
-.third-section-container-carousel {
-  display: grid;
-  grid-auto-flow: column;
-  scroll-behavior: auto;
-  gap: var(--space-4xl);
-  overflow-y: auto;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x-mandatory;
-  scrollbar-width: none;
+.third-section-container
+  .third-section-container-content
+  .third-section-container-content-top
+  .third-section-container-carousel-wrapper {
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-4xl) 0;
+  width: 100%;
 }
-.third-section-container-carousel::-webkit-scrollbar {
+.third-section-container
+  .third-section-container-content
+  .third-section-container-content-top
+  .third-section-container-carousel-wrapper
+  .third-section-container-carousel {
+  display: flex;
+  animation: fade 3s ease-out infinite;
+}
+.third-section-container
+  .third-section-container-content
+  .third-section-container-content-top
+  .third-section-container-carousel-wrapper
+  .third-section-container-carousel::-webkit-scrollbar {
   display: none;
 }
-.third-section-container-carousel-card {
+.third-section-container
+  .third-section-container-content
+  .third-section-container-content-top
+  .third-section-container-carousel-wrapper
+  .third-section-container-carousel
+  .third-section-container-carousel-card {
   display: flex;
   align-items: center;
-  justify-content: center;
-  scroll-snap-align: start;
-  border-radius: 30px;
-  min-height: 200px;
-  min-width: 500px;
+  flex: 0 0 33.33%;
+  box-sizing: border-box;
+  padding: 0 10px;
 }
+.third-section-container
+  .third-section-container-content
+  .third-section-container-content-top
+  .third-section-container-carousel-wrapper
+  .third-section-container-carousel
+  .third-section-container-carousel-card
+  img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  animation: fade 3s ease-out infinite;
+}
+
 /* bottom content (FAQ) */
 .third-section-container-content-bottom {
   display: flex;
@@ -79,4 +116,14 @@
 }
 .collapse-item-question img {
   transition: transform 0.3s ease;
+}
+
+/* animation */
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
 }
