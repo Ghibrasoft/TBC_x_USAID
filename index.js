@@ -75,36 +75,51 @@ fetch("./db/cards-data.json")
   .catch((error) => console.error(error));
 
 // carousel
+const carousel = document.querySelector(".carousel");
 const slider = document.querySelector(".slider");
 const leftArrow = document.querySelector(".left");
 const rightArrow = document.querySelector(".right");
-const dotParent = document.querySelector(".controls ul");
-var slideIndex = 0;
+let slideIndex = 0;
+let intervalId = 0;
+const slideInterval = 3000;
 
-const setIndexHandler = () => {
-  document
-    .querySelector(".controls .selected-dot")
-    .classList.remove("selected-dot");
-  slider.style.transform = "translate(" + slideIndex * -100 + "%)";
+const resetStyles = () => {
+  for (let i = 0; i < slider.children.length; i++) {
+    slider.children[i].style.zIndex = 0;
+    slider.children[i].style.opacity = 0;
+  }
 };
 
-document.querySelectorAll(".controls li").forEach((dot, index) => {
-  dot.addEventListener("click", () => {
-    slideIndex = index;
-    setIndexHandler();
-    dot.classList.add("selected-dot");
-  });
-});
+// auto fading
+const startAnimating = () => {
+  intervalId = setInterval(() => {
+    resetStyles();
+    slideIndex = slideIndex < 6 ? slideIndex + 1 : 0;
+    slider.children[slideIndex].style.zIndex = 1;
+    slider.children[slideIndex].style.opacity = 1;
+  }, slideInterval);
+};
+startAnimating();
 
-leftArrow.addEventListener("click", () => {
-  slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
-  setIndexHandler();
-  dotParent.children[slideIndex].classList.add("selected-dot");
+carousel.addEventListener("mouseover", () => {
+  clearInterval(intervalId);
 });
+carousel.addEventListener("mouseout", () => {
+  startAnimating();
+});
+// prev
+leftArrow.addEventListener("click", () => {
+  resetStyles();
+  slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
+  slider.children[slideIndex].style.zIndex = 1;
+  slider.children[slideIndex].style.opacity = 1;
+});
+// next
 rightArrow.addEventListener("click", () => {
-  slideIndex = slideIndex < 3 - 1 ? slideIndex + 1 : 3 - 1;
-  setIndexHandler();
-  dotParent.children[slideIndex].classList.add("selected-dot");
+  resetStyles();
+  slideIndex = slideIndex < 6 ? slideIndex + 1 : 6;
+  slider.children[slideIndex].style.zIndex = 1;
+  slider.children[slideIndex].style.opacity = 1;
 });
 
 // collapse functionality
