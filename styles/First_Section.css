@@ -76,3 +76,34 @@
   a:hover {
   color: var(--color-link-hover);
 }
+
+@media screen and (max-width: 768px) {
+  .first-section-container
+    .first-section-top
+    .first-section-top-title-wrapper
+    .first-section-top-title
+    h1 {
+    font-size: var(--font-size-2xl);
+  }
+  .first-section-container
+    .first-section-top
+    .first-section-top-title-wrapper
+    .first-section-top-title
+    h3 {
+    font-size: var(--font-size-xl);
+  }
+  .first-section-container
+    .first-section-top
+    .first-section-image-wrapper
+    .cover-img {
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+  }
+  .first-section-container
+    .first-section-bottom
+    .first-section-bottom-content
+    .first-section-bottom-desc {
+    font-size: var(--font-size-l);
+  }
+}
