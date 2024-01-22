@@ -79,6 +79,7 @@ const carousel = document.querySelector(".carousel");
 const slider = document.querySelector(".slider");
 const leftArrow = document.querySelector(".left");
 const rightArrow = document.querySelector(".right");
+const dotParent = document.querySelector(".controls ul");
 const slidesCount = slider.children.length - 1;
 let slideIndex = 0;
 let intervalId = 0;
@@ -91,11 +92,32 @@ const resetStyles = () => {
   }
 };
 
+const setIndexHandler = () => {
+  resetStyles();
+  document
+    .querySelector(".controls .selected-dot")
+    .classList.remove("selected-dot");
+  slider.children[slideIndex].style.zIndex = 1;
+  slider.children[slideIndex].style.opacity = 1;
+};
+
+document.querySelectorAll(".controls li").forEach((dot, index) => {
+  dot.addEventListener("click", () => {
+    slideIndex = index;
+    setIndexHandler();
+    dot.classList.add("selected-dot");
+  });
+});
+
 // auto fading
 const startAnimating = () => {
   intervalId = setInterval(() => {
     resetStyles();
+    document
+      .querySelector(".controls .selected-dot")
+      .classList.remove("selected-dot");
     slideIndex = slideIndex < slidesCount ? slideIndex + 1 : 0;
+    dotParent.children[slideIndex].classList.add("selected-dot");
     slider.children[slideIndex].style.zIndex = 1;
     slider.children[slideIndex].style.opacity = 1;
   }, slideInterval);
@@ -113,6 +135,8 @@ carousel.addEventListener("mouseout", () => {
 leftArrow.addEventListener("click", () => {
   resetStyles();
   slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
+  setIndexHandler();
+  dotParent.children[slideIndex].classList.add("selected-dot");
   slider.children[slideIndex].style.zIndex = 1;
   slider.children[slideIndex].style.opacity = 1;
 });
@@ -120,6 +144,8 @@ leftArrow.addEventListener("click", () => {
 rightArrow.addEventListener("click", () => {
   resetStyles();
   slideIndex = slideIndex < slidesCount ? slideIndex + 1 : slidesCount;
+  setIndexHandler();
+  dotParent.children[slideIndex].classList.add("selected-dot");
   slider.children[slideIndex].style.zIndex = 1;
   slider.children[slideIndex].style.opacity = 1;
 });
