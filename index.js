@@ -1,4 +1,4 @@
-// change header bg onScroll
+// ---------- change header bg onScroll ---------- //
 const header = document.getElementById("header");
 function changeHeaderBg() {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
@@ -11,7 +11,7 @@ function changeHeaderBg() {
 }
 window.addEventListener("scroll", changeHeaderBg);
 
-// active nav tabs
+// ---------- active nav tabs ---------- //
 const navLinks = document.querySelectorAll(".nav-link");
 navLinks.forEach((navLink) => {
   navLink.addEventListener("click", () => {
@@ -21,7 +21,19 @@ navLinks.forEach((navLink) => {
   });
 });
 
-// dynamically append learning courses
+// ---------- burger menu ---------- //
+const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
+const burgerTopLine = document.querySelector(".top-line");
+const burgerBottomLine = document.querySelector(".bottom-line");
+
+burgerMenu.addEventListener("click", () => {
+  console.log("burger clicked");
+  burgerMenu.classList.toggle("burger-menu-rotate");
+  burgerTopLine.classList.toggle("top-line-rotate");
+  burgerBottomLine.classList.toggle("bottom-line-rotate");
+});
+
+// ---------- dynamically append learning courses ---------- //
 fetch("./db/cards-data.json")
   .then((res) => res.json())
   .then((cardsData) => {
@@ -74,7 +86,7 @@ fetch("./db/cards-data.json")
   })
   .catch((error) => console.error(error));
 
-// carousel
+// ---------- carousel ---------- //
 const carousel = document.querySelector(".carousel");
 const slider = document.querySelector(".slider");
 const leftArrow = document.querySelector(".left");
@@ -150,7 +162,7 @@ rightArrow.addEventListener("click", () => {
   slider.children[slideIndex].style.opacity = 1;
 });
 
-// collapse functionality
+// ---------- collapse functionality ---------- //
 function collapseHandler(contentId) {
   const content = document.getElementById(contentId);
   const arrowDownIcon = content.previousElementSibling.querySelector("img");

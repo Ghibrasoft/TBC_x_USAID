@@ -15,16 +15,19 @@
   width: 100%;
   object-fit: cover;
 }
-.first-section-container .first-section-top .first-section-top-title-wrapper {
+.first-section-container
+  .first-section-top
+  .first-section-top-title-wrapper
+  .first-section-top-title {
   position: absolute;
   top: 50%;
-  /* left: 275px; */
   transform: translateY(-50%);
   color: var(--color-text-base);
 }
 .first-section-container
   .first-section-top
   .first-section-top-title-wrapper
+  .first-section-top-title
   h1 {
   font-size: 42px;
   line-height: 1.6em;
@@ -32,6 +35,7 @@
 .first-section-container
   .first-section-top
   .first-section-top-title-wrapper
+  .first-section-top-title
   h3 {
   font-size: 34px;
   line-height: 1.6em;
