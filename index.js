@@ -37,16 +37,25 @@ navLinks.forEach((navLink) => {
 });
 
 // ---------- BURGER MENU ---------- //
-// const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
-// const burgerTopLine = document.querySelector(".top-line");
-// const burgerBottomLine = document.querySelector(".bottom-line");
+const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
+const burgerMenuLines = document.querySelectorAll(
+  ".burger-menu-wrapper-inner-lines-line"
+);
+const burgerTopLine = document.querySelector(".top-line");
+const burgerBottomLine = document.querySelector(".bottom-line");
 
-// burgerMenu.addEventListener("click", () => {
-//   console.log("burger clicked");
-//   burgerMenu.classList.toggle("burger-menu-rotate");
-//   burgerTopLine.classList.toggle("top-line-rotate");
-//   burgerBottomLine.classList.toggle("bottom-line-rotate");
-// });
+burgerMenu.addEventListener("click", () => {
+  burgerMenu.classList.toggle("burger-menu-rotate");
+  burgerTopLine.classList.toggle("top-line-rotate");
+  burgerBottomLine.classList.toggle("bottom-line-rotate");
+  burgerMenuLines.forEach((line) => {
+    if (burgerMenu.classList.contains("burger-menu-rotate")) {
+      line.style.backgroundColor = "var(--color-link-hover)";
+    } else {
+      line.style.backgroundColor = "var(--color-text-base)";
+    }
+  });
+});
 
 // ---------- LEARNING COURSES ---------- //
 document.addEventListener("DOMContentLoaded", () => {

@@ -21,7 +21,6 @@
   width: 182px;
   height: 40px;
 }
-/* .navbar-left-logo {} */
 .navbar-right-list {
   display: flex;
   align-items: center;
@@ -46,4 +45,16 @@
 }
 .nav-link.active {
   color: var(--color-text-active);
+}
+
+.burger-menu-wrapper {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .navbar-right-list {
+    display: none;
+  }
+  .burger-menu-wrapper {
+    display: block;
+  }
 }
