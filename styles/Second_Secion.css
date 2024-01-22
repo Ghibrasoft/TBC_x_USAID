@@ -88,3 +88,15 @@
   color: var(--color-link-alt-hover);
   transition: color 0.3s ease-in;
 }
+
+@media screen and (max-width: 1024px) {
+  .second-section-container .second-section-grid-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .second-section-container .second-section-grid-container {
+    grid-template-columns: 1fr;
+  }
+}

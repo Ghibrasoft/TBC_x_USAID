@@ -1,3 +1,18 @@
+// ---------- get window width ---------- //
+var windowWidth =
+  window.innerWidth ||
+  document.documentElement.clientWidth ||
+  document.body.clientWidth;
+
+function updateWindowWidth() {
+  windowWidth =
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
+}
+updateWindowWidth();
+window.addEventListener("resize", updateWindowWidth);
+
 // ---------- change header bg onScroll ---------- //
 const header = document.getElementById("header");
 function changeHeaderBg() {
@@ -22,16 +37,16 @@ navLinks.forEach((navLink) => {
 });
 
 // ---------- burger menu ---------- //
-const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
-const burgerTopLine = document.querySelector(".top-line");
-const burgerBottomLine = document.querySelector(".bottom-line");
+// const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
+// const burgerTopLine = document.querySelector(".top-line");
+// const burgerBottomLine = document.querySelector(".bottom-line");
 
-burgerMenu.addEventListener("click", () => {
-  console.log("burger clicked");
-  burgerMenu.classList.toggle("burger-menu-rotate");
-  burgerTopLine.classList.toggle("top-line-rotate");
-  burgerBottomLine.classList.toggle("bottom-line-rotate");
-});
+// burgerMenu.addEventListener("click", () => {
+//   console.log("burger clicked");
+//   burgerMenu.classList.toggle("burger-menu-rotate");
+//   burgerTopLine.classList.toggle("top-line-rotate");
+//   burgerBottomLine.classList.toggle("bottom-line-rotate");
+// });
 
 // ---------- dynamically append learning courses ---------- //
 fetch("./db/cards-data.json")

@@ -216,3 +216,9 @@ body {
 .controls ul li.selected-dot {
   background-color: var(--color-text-base);
 }
+
+@media only screen and (max-width: 1024px) {
+}
+
+@media only screen and (max-width: 768px) {
+}
