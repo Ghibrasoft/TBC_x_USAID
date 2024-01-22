@@ -79,6 +79,7 @@ const carousel = document.querySelector(".carousel");
 const slider = document.querySelector(".slider");
 const leftArrow = document.querySelector(".left");
 const rightArrow = document.querySelector(".right");
+const slidesCount = slider.children.length - 1;
 let slideIndex = 0;
 let intervalId = 0;
 const slideInterval = 3000;
@@ -94,7 +95,7 @@ const resetStyles = () => {
 const startAnimating = () => {
   intervalId = setInterval(() => {
     resetStyles();
-    slideIndex = slideIndex < 6 ? slideIndex + 1 : 0;
+    slideIndex = slideIndex < slidesCount ? slideIndex + 1 : 0;
     slider.children[slideIndex].style.zIndex = 1;
     slider.children[slideIndex].style.opacity = 1;
   }, slideInterval);
@@ -107,6 +108,7 @@ carousel.addEventListener("mouseover", () => {
 carousel.addEventListener("mouseout", () => {
   startAnimating();
 });
+
 // prev
 leftArrow.addEventListener("click", () => {
   resetStyles();
@@ -117,7 +119,7 @@ leftArrow.addEventListener("click", () => {
 // next
 rightArrow.addEventListener("click", () => {
   resetStyles();
-  slideIndex = slideIndex < 6 ? slideIndex + 1 : 6;
+  slideIndex = slideIndex < slidesCount ? slideIndex + 1 : slidesCount;
   slider.children[slideIndex].style.zIndex = 1;
   slider.children[slideIndex].style.opacity = 1;
 });
