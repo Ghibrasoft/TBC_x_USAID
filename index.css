@@ -4,6 +4,7 @@
 @import url("/styles/First_Section.css");
 @import url("/styles/Second_Secion.css");
 @import url("/styles/Third_Section.css");
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
 * {
   margin: 0;
@@ -16,6 +17,7 @@ html {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   color: var(--color-text-base);
   background-color: var(--color-bg-base);
 }
@@ -76,22 +78,20 @@ body {
 }
 
 /* burger menu */
-.burger-menu-wrapper {
+.burger-menu {
   width: 32px;
   height: 28px;
 }
-.burger-menu-wrapper .burger-menu-wrapper-inner {
+.burger-menu .burger-menu-wrapper {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
-  width: 100%;
+  width: 32px;
+  height: 28px;
   vertical-align: baseline;
   transition: all 0.5s;
 }
-.burger-menu-wrapper
-  .burger-menu-wrapper-inner
-  .burger-menu-wrapper-inner-lines {
+.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines {
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -100,33 +100,24 @@ body {
   height: 21px;
   transition: transform 0.33s ease-out;
 }
-.burger-menu-wrapper
-  .burger-menu-wrapper-inner
-  .burger-menu-wrapper-inner-lines
-  .burger-menu-wrapper-inner-lines-line {
+.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines span {
   display: flex;
   background-color: var(--color-text-base);
   width: 100%;
   height: 3px;
   border-radius: 1.5px;
 }
-.burger-menu-wrapper
-  .burger-menu-wrapper-inner
-  .burger-menu-wrapper-inner-lines
-  .burger-menu-wrapper-inner-lines-line:nth-child(1) {
+.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines span:nth-child(1) {
   transform-origin: right;
   transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
 }
-.burger-menu-wrapper
-  .burger-menu-wrapper-inner
-  .burger-menu-wrapper-inner-lines
-  .burger-menu-wrapper-inner-lines-line:nth-child(odd) {
+.burger-menu
+  .burger-menu-wrapper
+  .burger-menu-wrapper-lines
+  span:nth-child(odd) {
   width: 50%;
 }
-.burger-menu-wrapper
-  .burger-menu-wrapper-inner
-  .burger-menu-wrapper-inner-lines
-  .burger-menu-wrapper-inner-lines-line:nth-child(3) {
+.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines span:nth-child(3) {
   align-self: flex-end;
   transform-origin: left;
   transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);

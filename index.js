@@ -52,9 +52,9 @@ navLinks.forEach((navLink) => {
 });
 
 // ---------- BURGER MENU, SIDEBAR ---------- //
-const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
+const burgerMenu = document.querySelector(".burger-menu-wrapper");
 const burgerMenuLines = document.querySelectorAll(
-  ".burger-menu-wrapper-inner-lines-line"
+  ".burger-menu-wrapper-lines span"
 );
 const burgerTopLine = document.querySelector(".top-line");
 const burgerBottomLine = document.querySelector(".bottom-line");
