@@ -273,14 +273,14 @@ document.addEventListener("DOMContentLoaded", () => {
     .catch((error) => console.error("Error fetching partners:", error));
 });
 
-// ---------- DYNAMIC ANCHOR TAG ---------- //
+// ---------- MOVE ANCHOR TAG ---------- //
 const collapseContainer = document.querySelector(".collapse-container");
 const titleWrapper = document.querySelector(
   ".third-section-container-content-bottom-inner-title-wrapper"
 );
 const allQuestionsLink = document.getElementById("all-questions");
 
-if (windowWidth < 768) {
+if (windowWidth <= 768) {
   moveElement(allQuestionsLink, titleWrapper, collapseContainer);
 } else {
   moveElement(allQuestionsLink, collapseContainer, titleWrapper);
@@ -292,6 +292,43 @@ function moveElement(element, source, destination) {
     destination.appendChild(element);
   }
 }
+
+// ----------  MOVE ELEMENTS (FOOTER)---------- //
+function moveElements() {
+  if (windowWidth <= 768) {
+    const buttonElement = document.querySelector(
+      ".footer-container-content-bottom-actions button"
+    );
+    const targetDiv = document.querySelector(
+      ".footer-container-content-top-right"
+    );
+
+    if (buttonElement && targetDiv) {
+      const socmediaDiv = targetDiv.querySelector(
+        ".footer-container-content-top-right-socmedia"
+      );
+
+      if (socmediaDiv) {
+        targetDiv.insertBefore(buttonElement, socmediaDiv);
+      } else {
+        targetDiv.appendChild(buttonElement);
+      }
+    }
+
+    const copyrightDiv = document.querySelector(
+      ".footer-container-content-copyright"
+    );
+    const bottomDiv = document.querySelector(
+      ".footer-container-content-bottom"
+    );
+
+    const bothParentElement = copyrightDiv.parentElement;
+    // swap the positions
+    bothParentElement.insertBefore(bottomDiv, copyrightDiv);
+  }
+}
+window.addEventListener("resize", moveElements);
+moveElements();
 
 // ---------- COLLAPSE FUNCTIONALITY ---------- //
 function collapseHandler(contentId) {

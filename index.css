@@ -224,6 +224,23 @@ body {
   align-items: center;
 }
 
+/* button tag */
+#contact-us {
+  cursor: pointer;
+  font-size: var(--font-size-m);
+  padding: 6px var(--space-2xl);
+  border-radius: var(--border-radius-m);
+  outline: none;
+  background-color: var(--color-link);
+  color: var(--color-text-base);
+  transition: 0.3s ease-out;
+}
+#contact-us:hover {
+  color: #000;
+  background-color: var(--color-text-base);
+  transition: 0.3s ease-out;
+}
+
 @media screen and (max-width: 1024px) {
   .content-width {
     width: 80%;
@@ -242,5 +259,13 @@ body {
     margin: var(--space-3xl) 0;
     font-weight: lighter;
     font-size: var(--font-size-m);
+  }
+
+  #contact-us {
+    padding: var(--space-xs) var(--space-s);
+  }
+
+  .controls .arrow {
+    display: none;
   }
 }

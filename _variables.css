@@ -38,9 +38,9 @@
   --dot-size-m: 12px;
   --dot-size-l: 26px;
 
-  --burger-menu-width: 32px;
-  --burger-menu-height: 32px;
+  --burger-menu-width: 26px;
+  --burger-menu-height: 21px;
   --burger-menu-line-height: 3px;
-  --top-line-translateY: 14px;
-  --bottom-line-translateY: -2px;
+  --top-line-translateY: 9px;
+  --bottom-line-translateY: -4px;
 }
