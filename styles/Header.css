@@ -61,7 +61,6 @@
   justify-content: space-between;
   width: inherit;
   height: inherit;
-  transition: transform 0.33s ease-out;
 }
 .burger-menu .burger-menu-lines span {
   display: flex;
@@ -70,12 +69,12 @@
   height: var(--burger-menu-line-height);
   border-radius: 1.5px;
 }
+.burger-menu .burger-menu-lines span:nth-child(odd) {
+  width: 50%;
+}
 .burger-menu .burger-menu-lines span:nth-child(1) {
   transform-origin: right;
   transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-.burger-menu .burger-menu-lines span:nth-child(odd) {
-  width: 50%;
 }
 .burger-menu .burger-menu-lines span:nth-child(3) {
   align-self: flex-end;
