@@ -53,7 +53,10 @@ burgerMenu.addEventListener("click", () => {
 });
 
 document.body.addEventListener("click", (e) => {
-  if (e.target === sidebarOverlay) {
+  if (
+    !burgerMenu.contains(e.target) &&
+    sidebarWrapper.classList.contains("show-sidebar")
+  ) {
     toggleSidebar();
     toggleAnimationClasses();
     toggleMenuLineColors();
