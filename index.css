@@ -143,38 +143,36 @@ body {
 
 .menu {
   cursor: pointer;
-  width: 200px;
-  height: 200px;
-  margin: 8px;
-  border-radius: 5px;
+  width: var(--menu-width);
+  height: var(--menu-height);
+  border-radius: var(--border-radius-half);
 }
 .menu div {
   position: relative;
-  width: 120px;
-  height: 120px;
-  margin: 40px;
+  width: var(--menu-div-width);
+  height: var(--menu-div-height);
 }
 .menu span {
+  display: block;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  display: block;
   width: 100%;
-  height: 10px;
-  background-color: #fff;
   border-radius: 5px;
+  background-color: #fff;
+  height: var(--menu-line-height);
+  transform: translate(-50%, -50%);
   transition: transform 0.5s, width 0.5s;
 }
 .menu .top-line {
   width: 50%;
-  transform: translate(-100%, -50px);
+  transform: translate(-100%, var(--top-line-translateY));
 }
 .menu .bottom-line {
   width: 50%;
   left: auto;
   right: 0;
-  transform: translate(0, 40px);
+  transform: translate(0, var(--bottom-line-translateY));
 }
 .openmenu .top-line {
   transform-origin: 0 0;

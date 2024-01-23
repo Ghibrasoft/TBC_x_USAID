@@ -42,4 +42,12 @@
   --dot-size-s: 6px;
   --dot-size-m: 12px;
   --dot-size-l: 26px;
+
+  --menu-width: 200px;
+  --menu-height: 200px;
+  --menu-div-width: var(--menu-width) * 0.6;
+  --menu-div-height: var(--menu-height) * 0.6;
+  --menu-line-height: 10px;
+  --top-line-translateY: calc(-1 * var(--menu-line-height) * 5);
+  --bottom-line-translateY: calc(var(--menu-line-height) * 4);
 }
