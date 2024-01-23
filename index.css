@@ -61,7 +61,6 @@ body {
 }
 
 .content-width {
-  /* width: calc(100% - 550px); */
   width: 100%;
   max-width: 980px;
   margin: 0 auto;
@@ -162,13 +161,13 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-  gap: var(--space-2xl);
+  gap: var(--space-3xl);
   list-style-type: none;
-  padding: 20px;
+  padding: var(--space-3xl) var(--space-xs);
 }
 
-.sidebar-item {
-  width: 100%;
+.sidebar li a {
+  font-size: var(--font-size-m);
 }
 
 .sidebar-overlay {

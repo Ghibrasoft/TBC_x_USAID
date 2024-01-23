@@ -22,7 +22,7 @@ function changeHeaderBg() {
 
   if (scrollPosition > lastScrollPosition) {
     // scrolling down
-    if (window.innerWidth < 768) {
+    if (window.innerWidth <= 768) {
       header.classList.add("hide-header");
     }
     header.classList.add("header-bg-secondary");
