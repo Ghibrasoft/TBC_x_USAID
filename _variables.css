@@ -17,7 +17,6 @@
   --color-bg-sidebar: #222222;
   --color-bg-overlay: rgba(24, 24, 24, 0.7);
 
-  --font-size-s: 0.8rem;
   --font-size-m: 1.2rem;
   --font-size-l: 1.4rem;
   --font-size-xl: 1.75rem;
@@ -33,21 +32,15 @@
   --space-4xl: 64px;
 
   --border-radius-s: 5px;
-  --border-radius-under-m: 7px;
-  --border-radius-m: 10px;
-  --border-radius-l: 15px;
-  --border-radius-half: 50%;
-  --border-radius-full: 100%;
+  --border-radius-m: 7px;
 
   --dot-size-s: 6px;
   --dot-size-m: 12px;
   --dot-size-l: 26px;
 
-  --menu-width: 200px;
-  --menu-height: 200px;
-  --menu-div-width: var(--menu-width) * 0.6;
-  --menu-div-height: var(--menu-height) * 0.6;
-  --menu-line-height: 10px;
-  --top-line-translateY: calc(-1 * var(--menu-line-height) * 5);
-  --bottom-line-translateY: calc(var(--menu-line-height) * 4);
+  --burger-menu-width: 32px;
+  --burger-menu-height: 32px;
+  --burger-menu-line-height: 3px;
+  --top-line-translateY: 14px;
+  --bottom-line-translateY: -2px;
 }

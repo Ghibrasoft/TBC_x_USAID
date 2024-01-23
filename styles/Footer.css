@@ -82,7 +82,7 @@
   cursor: pointer;
   font-size: var(--font-size-m);
   padding: 6px var(--space-2xl);
-  border-radius: var(--border-radius-under-m);
+  border-radius: var(--border-radius-m);
   outline: none;
   background-color: var(--color-link);
   color: var(--color-text-base);

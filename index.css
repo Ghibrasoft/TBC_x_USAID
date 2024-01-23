@@ -77,61 +77,6 @@ body {
   transition: 0.3s ease-in-out;
 }
 
-/* burger menu */
-.burger-menu {
-  width: 32px;
-  height: 28px;
-}
-.burger-menu .burger-menu-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 32px;
-  height: 28px;
-  vertical-align: baseline;
-  transition: all 0.5s;
-}
-.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines {
-  cursor: pointer;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 26px;
-  height: 21px;
-  transition: transform 0.33s ease-out;
-}
-.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines span {
-  display: flex;
-  background-color: var(--color-text-base);
-  width: 100%;
-  height: 3px;
-  border-radius: 1.5px;
-}
-.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines span:nth-child(1) {
-  transform-origin: right;
-  transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-.burger-menu
-  .burger-menu-wrapper
-  .burger-menu-wrapper-lines
-  span:nth-child(odd) {
-  width: 50%;
-}
-.burger-menu .burger-menu-wrapper .burger-menu-wrapper-lines span:nth-child(3) {
-  align-self: flex-end;
-  transform-origin: left;
-  transition: transform 0.33s cubic-bezier(0.54, -0.81, 0.57, 0.57);
-}
-.burger-menu-rotate {
-  transform: rotate(-45deg);
-}
-.top-line-rotate {
-  transform: rotate(90deg) translateX(9px);
-}
-.bottom-line-rotate {
-  transform: rotate(-90deg) translateX(-4px);
-}
-
 /* sidebar */
 .sidebar-wrapper {
   position: fixed;
@@ -142,7 +87,7 @@ body {
   opacity: 0;
   transform: translateX(100%);
   padding: var(--space-4xl) 0;
-  transition: transform 0.5s, opacity 0.5s ease-in;
+  transition: 0.5s ease-out;
   background-color: var(--color-bg-sidebar);
   z-index: 3;
 }
@@ -168,11 +113,13 @@ body {
   width: 100%;
   height: 100%;
   opacity: 0;
+  visibility: hidden;
   background-color: var(--color-bg-overlay);
-  transition: opacity 0.3s ease-in;
+  transition: 0.3s ease-in;
   z-index: 2;
 }
 .show-overlay {
+  visibility: visible;
   opacity: 1;
 }
 .show-sidebar {
