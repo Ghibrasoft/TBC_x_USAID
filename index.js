@@ -37,39 +37,49 @@ navLinks.forEach((navLink) => {
 });
 
 // ---------- BURGER MENU, SIDEBAR ---------- //
-function toggleSidebar() {
-  const sidebarWrapper = document.querySelector(".sidebar-wrapper");
-  const sidebarOverlay = document.querySelector(".sidebar-overlay");
-
-  if (sidebarWrapper.classList.contains("show-sidebar")) {
-    sidebarWrapper.classList.remove("show-sidebar");
-    sidebarOverlay.classList.remove("show-overlay");
-  } else {
-    sidebarWrapper.classList.add("show-sidebar");
-    sidebarOverlay.classList.add("show-overlay");
-  }
-}
-
 const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
 const burgerMenuLines = document.querySelectorAll(
   ".burger-menu-wrapper-inner-lines-line"
 );
 const burgerTopLine = document.querySelector(".top-line");
 const burgerBottomLine = document.querySelector(".bottom-line");
+const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+const sidebarOverlay = document.querySelector(".sidebar-overlay");
 
 burgerMenu.addEventListener("click", () => {
   toggleSidebar();
+  toggleAnimationClasses();
+  toggleMenuLineColors();
+});
+
+document.body.addEventListener("click", (e) => {
+  if (e.target === sidebarOverlay) {
+    toggleSidebar();
+    toggleAnimationClasses();
+    toggleMenuLineColors();
+  }
+});
+
+function toggleSidebar() {
+  const isOpen = sidebarWrapper.classList.toggle("show-sidebar");
+  sidebarOverlay.classList.toggle("show-overlay", isOpen);
+}
+
+function toggleAnimationClasses() {
   burgerMenu.classList.toggle("burger-menu-rotate");
   burgerTopLine.classList.toggle("top-line-rotate");
   burgerBottomLine.classList.toggle("bottom-line-rotate");
+}
+
+function toggleMenuLineColors() {
+  const isRotated = burgerMenu.classList.contains("burger-menu-rotate");
+  const color = isRotated
+    ? "var(--color-link-hover)"
+    : "var(--color-text-base)";
   burgerMenuLines.forEach((line) => {
-    if (burgerMenu.classList.contains("burger-menu-rotate")) {
-      line.style.backgroundColor = "var(--color-link-hover)";
-    } else {
-      line.style.backgroundColor = "var(--color-text-base)";
-    }
+    line.style.backgroundColor = color;
   });
-});
+}
 
 // ---------- LEARNING COURSES ---------- //
 document.addEventListener("DOMContentLoaded", () => {
