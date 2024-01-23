@@ -36,7 +36,20 @@ navLinks.forEach((navLink) => {
   });
 });
 
-// ---------- BURGER MENU ---------- //
+// ---------- BURGER MENU, SIDEBAR ---------- //
+function toggleSidebar() {
+  const sidebarWrapper = document.querySelector(".sidebar-wrapper");
+  const sidebarOverlay = document.querySelector(".sidebar-overlay");
+
+  if (sidebarWrapper.classList.contains("show-sidebar")) {
+    sidebarWrapper.classList.remove("show-sidebar");
+    sidebarOverlay.classList.remove("show-overlay");
+  } else {
+    sidebarWrapper.classList.add("show-sidebar");
+    sidebarOverlay.classList.add("show-overlay");
+  }
+}
+
 const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
 const burgerMenuLines = document.querySelectorAll(
   ".burger-menu-wrapper-inner-lines-line"
@@ -45,6 +58,7 @@ const burgerTopLine = document.querySelector(".top-line");
 const burgerBottomLine = document.querySelector(".bottom-line");
 
 burgerMenu.addEventListener("click", () => {
+  toggleSidebar();
   burgerMenu.classList.toggle("burger-menu-rotate");
   burgerTopLine.classList.toggle("top-line-rotate");
   burgerBottomLine.classList.toggle("bottom-line-rotate");
