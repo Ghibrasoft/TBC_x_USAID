@@ -1,5 +1,5 @@
 .footer-container {
-  background-color: var(--color-bg-container);
+  background-color: var(--color-bg-header);
   margin-top: var(--space-4xl);
 }
 .footer-container .footer-container-content {
@@ -93,6 +93,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .footer-container .footer-container-content {
+    padding: var(--space-3xl) 0;
+  }
+
   .footer-container .footer-container-content .footer-container-content-top {
     flex-direction: column;
     align-items: flex-start;
@@ -106,6 +110,7 @@
     width: 120px;
     height: 35px;
   }
+
   .footer-container
     .footer-container-content
     .footer-container-content-top

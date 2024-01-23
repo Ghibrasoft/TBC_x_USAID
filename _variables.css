@@ -1,20 +1,20 @@
 :root {
-  --color-text-base: #f4f4f4;
-  --color-text-active: #00a3e0;
-  --color-text-hover: #00a3e0;
-  --color-link: #00aef3;
-  --color-link-hover: #aaaaaa;
-  --color-link-alt: #00aeef;
-  --color-link-alt-hover: #0080b0;
-  --color-border: #595959;
-  --color-svg-base: #fff;
-  --color-svg-hover: #e8e6e6ae;
+  --color-text-base: rgba(244, 244, 244, 1);
+  --color-text-active: rgba(0, 163, 224, 1);
+  --color-text-hover: rgba(0, 163, 224, 1);
+  --color-link: rgba(0, 174, 243, 1);
+  --color-link-hover: rgba(170, 170, 170, 1);
+  --color-link-alt: rgba(0, 174, 239, 1);
+  --color-link-alt-hover: rgba(0, 128, 176, 1);
+  --color-border: rgba(89, 89, 89, 1);
+  --color-svg-base: rgba(255, 255, 255, 1);
+  --color-svg-hover: rgba(232, 230, 230, 0.68);
 
-  --color-bg-base: #161616;
-  --color-bg-container: #2b2b2b;
-  --color-bg-header: #1a1e1f;
-  --color-bg-header-secondary: #222222f2;
-  --color-bg-sidebar: #222222;
+  --color-bg-base: rgba(22, 22, 22, 1);
+  --color-bg-container: rgba(43, 43, 43, 1);
+  --color-bg-header: rgba(26, 30, 31, 1);
+  --color-bg-header-secondary: rgba(34, 34, 34, 0.95);
+  --color-bg-sidebar: rgba(34, 34, 34, 1);
   --color-bg-overlay: rgba(24, 24, 24, 0.7);
 
   --font-size-m: 1.2rem;
