@@ -51,6 +51,11 @@ navLinks.forEach((navLink) => {
   });
 });
 
+// ========== testing ========== //
+const menu = document.getElementById("menu");
+menu.onclick = () => {
+  menu.classList.toggle("openmenu");
+};
 // ---------- BURGER MENU, SIDEBAR ---------- //
 const burgerMenu = document.querySelector(".burger-menu-wrapper-inner");
 const burgerMenuLines = document.querySelectorAll(
