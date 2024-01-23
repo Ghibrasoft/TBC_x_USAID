@@ -69,7 +69,11 @@ body {
 
 .header-bg-secondary {
   background-color: var(--color-bg-header-secondary);
-  transition: background-color 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+.hide-header {
+  transform: translateY(-100%);
+  transition: 0.3s ease-in-out;
 }
 
 /* burger menu */

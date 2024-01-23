@@ -15,16 +15,31 @@ window.addEventListener("resize", updateWindowWidth);
 
 // ---------- CHANGE HEADER BG ONSCROLL ---------- //
 const header = document.getElementById("header");
+let lastScrollPosition = 0;
+
 function changeHeaderBg() {
   const scrollPosition = window.scrollY || document.documentElement.scrollTop;
 
-  if (scrollPosition > 0) {
+  if (scrollPosition > lastScrollPosition) {
+    // scrolling down
+    if (window.innerWidth < 768) {
+      header.classList.add("hide-header");
+    }
     header.classList.add("header-bg-secondary");
   } else {
-    header.classList.remove("header-bg-secondary");
+    // scrolling up
+    header.classList.remove("hide-header");
+    if (scrollPosition === 0) {
+      // at the top of the page
+      header.classList.remove("header-bg-secondary");
+    }
   }
+
+  lastScrollPosition = scrollPosition;
 }
+
 window.addEventListener("scroll", changeHeaderBg);
+window.addEventListener("resize", changeHeaderBg);
 
 // ---------- ACTIVE NAVIGATION TABS ---------- //
 const navLinks = document.querySelectorAll(".nav-link");
