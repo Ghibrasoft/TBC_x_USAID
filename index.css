@@ -176,14 +176,14 @@ body {
 }
 .openmenu .top-line {
   transform-origin: 0 0;
-  transform: translate(0, 0) rotate(-45deg);
+  transform: translate(0, 0) rotate(-135deg);
 }
 .openmenu .mid-line {
-  transform: translate(-50%, -50%) rotate(45deg);
+  transform: translate(-50%, -50%) rotate(-45deg);
 }
 .openmenu .bottom-line {
-  transform-origin: 100% 0;
-  transform: translate(-100%, 0) rotate(-45deg);
+  transform-origin: 50% 100%;
+  transform: translate(0, 0) rotate(-135deg);
 }
 
 /* sidebar */
