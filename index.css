@@ -78,10 +78,6 @@ body {
   height: 28px;
 }
 .burger-menu-wrapper .burger-menu-wrapper-inner {
-  /* width: 32px;
-  height: 28px;
-  transition: transform 0.33s ease-out; */
-
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,7 +130,6 @@ body {
 }
 .burger-menu-rotate {
   transform: rotate(-45deg);
-  /* transition: all 0.33s; */
 }
 .top-line-rotate {
   transform: rotate(90deg) translateX(6px);
