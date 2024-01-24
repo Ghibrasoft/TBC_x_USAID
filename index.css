@@ -4,7 +4,7 @@
 @import url("/styles/First_Section.css");
 @import url("/styles/Second_Secion.css");
 @import url("/styles/Third_Section.css");
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+Georgian&family=Poppins:wght@400;800&display=swap");
 
 * {
   margin: 0;
@@ -17,7 +17,7 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins", "Noto Sans Georgian", sans-serif;
   color: var(--color-text-base);
   background-color: var(--color-bg-base);
 }
