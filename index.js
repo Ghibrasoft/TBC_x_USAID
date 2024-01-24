@@ -58,6 +58,7 @@ const burgerTopLine = document.querySelector(".top-line");
 const burgerBottomLine = document.querySelector(".bottom-line");
 const sidebarWrapper = document.querySelector(".sidebar-wrapper");
 const sidebarOverlay = document.querySelector(".sidebar-overlay");
+const navbarListItems = document.querySelectorAll(".navbar-list-item");
 
 burgerMenu.addEventListener("click", () => {
   toggleSidebar();
@@ -65,9 +66,26 @@ burgerMenu.addEventListener("click", () => {
   toggleMenuLineColors();
 });
 
+sidebarOverlay.addEventListener("click", () => {
+  toggleSidebar();
+  toggleAnimationClasses();
+  toggleMenuLineColors();
+});
+
+navbarListItems.forEach((item) => {
+  item.addEventListener("click", () => {
+    if (sidebarWrapper.classList.contains("show-sidebar")) {
+      toggleSidebar();
+      toggleAnimationClasses();
+      toggleMenuLineColors();
+    }
+  });
+});
+
 document.body.addEventListener("click", (e) => {
   if (
     !burgerMenu.contains(e.target) &&
+    !sidebarWrapper.contains(e.target) &&
     sidebarWrapper.classList.contains("show-sidebar")
   ) {
     toggleSidebar();
