@@ -55,7 +55,7 @@ const questionWrapper = document.querySelectorAll(".collapse-item-question");
 
 questionWrapper.forEach((question) => {
   question.addEventListener("click", () => {
-    const { item } = question.dataset;
-    collapseHandler(item);
+    const { contentId } = question.dataset;
+    collapseHandler(contentId);
   });
 });
