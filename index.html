@@ -180,7 +180,7 @@
                     >
                       <div
                         class="collapse-item-question"
-                        onclick="collapseHandler('first-question')"
+                        data-item="first-question"
                       >
                         როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?
                         <img
@@ -227,7 +227,7 @@
                     >
                       <div
                         class="collapse-item-question"
-                        onclick="collapseHandler('second-question')"
+                        data-item="second-question"
                       >
                         შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?
                         <img
@@ -254,7 +254,7 @@
                     >
                       <div
                         class="collapse-item-question"
-                        onclick="collapseHandler('third-question')"
+                        data-item="third-question"
                       >
                         რა ღირს სწავლა პროგრამის ფარგლებში?
                         <img
@@ -318,34 +318,5 @@
     </div>
 
     <script src="index.js" type="module"></script>
-    <!-- <script>
-      function collapseHandler(contentId) {
-        const content = document.getElementById(contentId);
-        const arrowDownIcon =
-          content.previousElementSibling.querySelector("img");
-        const allContentWrapper = document.querySelectorAll(
-          ".collapse-content-wrapper"
-        );
-
-        allContentWrapper.forEach((currContent) => {
-          if (currContent.id !== contentId) {
-            currContent.style.maxHeight = null;
-            const curArrowIcon =
-              currContent.previousElementSibling.querySelector("img");
-            if (curArrowIcon) {
-              curArrowIcon.style.transform = "rotate(0deg)";
-            }
-          }
-        });
-
-        if (content.style.maxHeight) {
-          content.style.maxHeight = null;
-          arrowDownIcon.style.transform = "rotate(0deg)";
-        } else {
-          content.style.maxHeight = content.scrollHeight + "px";
-          arrowDownIcon.style.transform = "rotate(180deg)";
-        }
-      }
-    </script> -->
   </body>
 </html>

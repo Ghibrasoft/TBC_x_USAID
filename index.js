@@ -1,5 +1,6 @@
 import { carouselHandler } from "./utils/carouselHandler.js";
 import { changeHeaderBg } from "./utils/headerBgOnscroll.js";
+import { collapseHandler } from "./utils/collapseHandler.js";
 import { menuSidebarHandler } from "./utils/burgerMenuSidebar.js";
 import { windowWidth, updateWindowWidth } from "./utils/windowWidth.js";
 import { fetchAndRenderCards } from "./utils/learningCoursesHandler..js";
@@ -50,29 +51,11 @@ window.addEventListener("resize", moveElements);
 moveElements();
 
 // ---------- COLLAPSE FUNCTIONALITY ---------- //
-function collapseHandler(contentId) {
-  const content = document.getElementById(contentId);
-  const arrowDownIcon = content.previousElementSibling.querySelector("img");
-  const allContentWrapper = document.querySelectorAll(
-    ".collapse-content-wrapper"
-  );
+const questionWrapper = document.querySelectorAll(".collapse-item-question");
 
-  allContentWrapper.forEach((currContent) => {
-    if (currContent.id !== contentId) {
-      currContent.style.maxHeight = null;
-      const curArrowIcon =
-        currContent.previousElementSibling.querySelector("img");
-      if (curArrowIcon) {
-        curArrowIcon.style.transform = "rotate(0deg)";
-      }
-    }
+questionWrapper.forEach((question) => {
+  question.addEventListener("click", () => {
+    const { item } = question.dataset;
+    collapseHandler(item);
   });
-
-  if (content.style.maxHeight) {
-    content.style.maxHeight = null;
-    arrowDownIcon.style.transform = "rotate(0deg)";
-  } else {
-    content.style.maxHeight = content.scrollHeight + "px";
-    arrowDownIcon.style.transform = "rotate(180deg)";
-  }
-}
+});
