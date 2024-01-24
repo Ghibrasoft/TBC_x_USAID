@@ -164,6 +164,7 @@
               <div
                 class="third-section-container-content-bottom-inner content-width"
               >
+                <!-- FAQ -->
                 <div
                   class="third-section-container-content-bottom-inner-title-wrapper"
                 >
@@ -173,6 +174,7 @@
 
                 <div class="collapse-container">
                   <div class="third-section-container-content-bottom-collapse">
+                    <!-- question 1 -->
                     <div
                       class="third-section-container-content-bottom-collapse-item"
                     >
@@ -219,7 +221,7 @@
                         </p>
                       </div>
                     </div>
-
+                    <!-- question 2 -->
                     <div
                       class="third-section-container-content-bottom-collapse-item"
                     >
@@ -246,7 +248,7 @@
                         </p>
                       </div>
                     </div>
-
+                    <!-- question 3 -->
                     <div
                       class="third-section-container-content-bottom-collapse-item"
                     >
@@ -315,6 +317,35 @@
       </footer>
     </div>
 
-    <script src="index.js"></script>
+    <script src="index.js" type="module"></script>
+    <!-- <script>
+      function collapseHandler(contentId) {
+        const content = document.getElementById(contentId);
+        const arrowDownIcon =
+          content.previousElementSibling.querySelector("img");
+        const allContentWrapper = document.querySelectorAll(
+          ".collapse-content-wrapper"
+        );
+
+        allContentWrapper.forEach((currContent) => {
+          if (currContent.id !== contentId) {
+            currContent.style.maxHeight = null;
+            const curArrowIcon =
+              currContent.previousElementSibling.querySelector("img");
+            if (curArrowIcon) {
+              curArrowIcon.style.transform = "rotate(0deg)";
+            }
+          }
+        });
+
+        if (content.style.maxHeight) {
+          content.style.maxHeight = null;
+          arrowDownIcon.style.transform = "rotate(0deg)";
+        } else {
+          content.style.maxHeight = content.scrollHeight + "px";
+          arrowDownIcon.style.transform = "rotate(180deg)";
+        }
+      }
+    </script> -->
   </body>
 </html>
