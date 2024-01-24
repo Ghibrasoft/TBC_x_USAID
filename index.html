@@ -14,44 +14,14 @@
   </head>
   <body>
     <div class="container">
+      <header id="header" class="header">
+        <nav class="navbar content-width">
+          <a href="#" class="navbar-left-logo">
+            <img alt="brand-logo" src="./assets/tbc-logo.svg" />
+          </a>
 
-    <header id="header" class="header">
-      <nav class="navbar content-width">
-        <a href="#" class="navbar-left-logo">
-          <img alt="brand-logo" src="./assets/tbc-logo.svg" />
-        </a>
-
-        <!-- menu (desktop) -->
-        <ul class="navbar-right-list">
-          <li class="navbar-list-item">
-            <a href="#" class="nav-link">მთავარი</a>
-          </li>
-          <li class="navbar-list-item">
-            <a href="#" class="nav-link">TBC IT</a>
-          </li>
-          <li class="navbar-list-item">
-            <a href="#" class="nav-link active">TBC x USAID</a>
-          </li>
-          <li class="navbar-list-item">
-            <a href="#" class="nav-link">რისკები</a>
-          </li>
-        </ul>
-
-        <!-- burger menu -->
-          <div class="burger-menu" role="button">
-            <div class="burger-menu-lines">
-              <span class="top-line"></span>
-              <span class="mid-line"></span>
-              <span class="bottom-line"></span>
-            </div>
-          </div>
-      </nav>
-    </header>
-    
-        <!-- sidebar (mobile) -->
-        <div class="sidebar-overlay"></div>
-        <nav class="sidebar-wrapper">
-          <ul class="sidebar">
+          <!-- menu (desktop) -->
+          <ul class="navbar-right-list">
             <li class="navbar-list-item">
               <a href="#" class="nav-link">მთავარი</a>
             </li>
@@ -65,8 +35,38 @@
               <a href="#" class="nav-link">რისკები</a>
             </li>
           </ul>
-        </nav>
 
+          <!-- burger menu -->
+          <div class="burger-menu" role="button">
+            <div class="burger-menu-lines">
+              <span class="top-line"></span>
+              <span class="mid-line"></span>
+              <span class="bottom-line"></span>
+            </div>
+          </div>
+        </nav>
+      </header>
+
+      <!-- sidebar (mobile) -->
+      <div class="sidebar-overlay"></div>
+      <nav class="sidebar-wrapper">
+        <ul class="sidebar">
+          <li class="navbar-list-item">
+            <a href="#" class="nav-link">მთავარი</a>
+          </li>
+          <li class="navbar-list-item">
+            <a href="#" class="nav-link">TBC IT</a>
+          </li>
+          <li class="navbar-list-item">
+            <a href="#" class="nav-link active">TBC x USAID</a>
+          </li>
+          <li class="navbar-list-item">
+            <a href="#" class="nav-link">რისკები</a>
+          </li>
+        </ul>
+      </nav>
+
+      <main>
         <!-- 1st section -->
         <section id="first-section" class="first-section-container">
           <div class="first-section-top">
@@ -113,126 +113,207 @@
         <section id="third-section" class="third-section-container">
           <div class="third-section-container-content">
             <div class="third-section-container-content-top">
-              <h1 class="third-section-container-content-top-title content-width">
+              <h1
+                class="third-section-container-content-top-title content-width"
+              >
                 პროექტის პარტნიორები
               </h1>
 
-            <div class="carousel-wrapper">
-              <div class="carousel">
-                <div class="slider"></div>
+              <div class="carousel-wrapper">
+                <div class="carousel">
+                  <div class="slider"></div>
 
-                <div class="controls">
+                  <div class="controls">
                     <span class="arrow left">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41"  width="18" height="35"><path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path></svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 21 41"
+                        width="18"
+                        height="35"
+                      >
+                        <path
+                          d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"
+                        ></path>
+                      </svg>
                     </span>
                     <span class="arrow right">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 41" transform="rotate(180)" width="18" height="35"><path d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"></path></svg>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 21 41"
+                        transform="rotate(180)"
+                        width="18"
+                        height="35"
+                      >
+                        <path
+                          d="M20.3 40.8 0 20.5 20.3.2l.7.7L1.3 20.5 21 40.1z"
+                        ></path>
+                      </svg>
                     </span>
 
                     <ul class="dots">
-                        <li class="selected-dot"></li>
-                        <li></li>
-                        <li></li>
+                      <li class="selected-dot"></li>
+                      <li></li>
+                      <li></li>
                     </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            
             </div>
 
             <div class="third-section-container-content-bottom">
-                <div class="third-section-container-content-bottom-inner content-width">
-                    <div class="third-section-container-content-bottom-inner-title-wrapper">
-                        <h1>ხშირად დასმული კითხვები</h3>
-                        <a href="#" id="all-questions">ყველა კითხვა</a>
+              <div
+                class="third-section-container-content-bottom-inner content-width"
+              >
+                <div
+                  class="third-section-container-content-bottom-inner-title-wrapper"
+                >
+                  <h1>ხშირად დასმული კითხვები</h1>
+                  <a href="#" id="all-questions">ყველა კითხვა</a>
+                </div>
+
+                <div class="collapse-container">
+                  <div class="third-section-container-content-bottom-collapse">
+                    <div
+                      class="third-section-container-content-bottom-collapse-item"
+                    >
+                      <div
+                        class="collapse-item-question"
+                        onclick="collapseHandler('first-question')"
+                      >
+                        როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?
+                        <img
+                          alt="arrow-down"
+                          src="./assets/icons/arrow-down.svg"
+                        />
+                      </div>
+                      <div id="first-question" class="collapse-content-wrapper">
+                        <p>
+                          კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:
+                        </p>
+                        <p>
+                          I ეტაპი - პირველ ეტაპზე საჭიროა, შეავსო სასურველი
+                          კურსისთვის განკუთვნილი სარეგისტრაციო ფორმა, რომელიც
+                          განთავსებულია კურსის შიდა გვერდზე. კურსზე რეგისტრაციის
+                          დასრულების შემდეგ დაიწყება შემოსული განცხადებების
+                          გადარჩევა. II ეტაპი - შერჩევის მეორე ეტაპი კურსების
+                          მიხედვით განსხვავებულია, ზოგიერთი კურსისთვის მოიცავს
+                          პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც
+                          მინიმალური ზღვარის გადალახვის შემთხვევაში გადახვალ
+                          შერჩევის შემდეგ ეტაპზე. III ეტაპი - მესამე ეტაპი
+                          კურსების მიხედვით განსხვავდება: Advance კურსებზე,
+                          სადაც მოითხოვება გარკვეული ტექნიკური ცოდნა,
+                          მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი ცოდნის დონის
+                          შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის
+                          წინასწარი ცოდნა მოთხოვნილი არ არის უნდა შეასრულოთ
+                          ტექნიკური დავალება, რაც თქვენი კვლევისა და თვითსწავლის
+                          უნარს ამოწმებს. IV ეტაპი - შერჩევის ბოლო მეოთხე ეტაპი
+                          მოიცავს გასაუბრებას შესარჩევ კომისიასთან. გასაუბრების
+                          წარმატებით გავლის შემთხვევაში ჩაირიცხებით კურსზე და
+                          გაფორმდება შესაბამისი ხელშეკრულება.
+                        </p>
+                        <p>
+                          * სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია,
+                          ყურადღებით წაიკითხო კურსის აღწერა, ნახო რას ისწავლი
+                          კურსის განმავლობაში და გაიგო გააჩნია თუ არა კურსს
+                          დასწრების წინაპირობა.
+                        </p>
+                      </div>
                     </div>
 
-                    <div class="collapse-container">
-                      <div class="third-section-container-content-bottom-collapse">
-                          <div class="third-section-container-content-bottom-collapse-item">
-                              <div class="collapse-item-question" onclick="collapseHandler('first-question')">
-                                  როგორ ხდება კურსებზე რეგისტრაცია და შერჩევა?
-                                  <img alt="arrow-down" src="./assets/icons/arrow-down.svg"/>
-                              </div>
-                              <div id="first-question" class="collapse-content-wrapper">
-                                  <p>კურსზე რეგისტრაციისთვის უნდა გაიარო რამდენიმე ეტაპი:</p>
-                                  <p>
-                                      I ეტაპი - პირველ ეტაპზე საჭიროა, შეავსო სასურველი კურსისთვის განკუთვნილი სარეგისტრაციო ფორმა, რომელიც განთავსებულია კურსის შიდა გვერდზე. კურსზე რეგისტრაციის დასრულების შემდეგ დაიწყება შემოსული განცხადებების გადარჩევა. 
-  II ეტაპი - შერჩევის მეორე ეტაპი კურსების მიხედვით განსხვავებულია, ზოგიერთი კურსისთვის მოიცავს პრე-ტესტს, ზოგიერთ კურსზე კი უნარების ტესტს, სადაც მინიმალური ზღვარის გადალახვის შემთხვევაში გადახვალ შერჩევის შემდეგ ეტაპზე.
-  III ეტაპი - მესამე ეტაპი კურსების მიხედვით განსხვავდება: Advance კურსებზე, სადაც მოითხოვება გარკვეული ტექნიკური ცოდნა, მონაწილეებმა უნდა დაწერონ ტექნიკური ტესტი ცოდნის დონის შესამოწმებლად, ხოლო კურსებზე, სადაც რაიმე ტიპის წინასწარი ცოდნა მოთხოვნილი არ არის უნდა შეასრულოთ ტექნიკური დავალება, რაც თქვენი კვლევისა და თვითსწავლის უნარს ამოწმებს.
-  IV ეტაპი - შერჩევის ბოლო მეოთხე ეტაპი მოიცავს გასაუბრებას შესარჩევ კომისიასთან. გასაუბრების წარმატებით გავლის შემთხვევაში ჩაირიცხებით კურსზე და გაფორმდება შესაბამისი ხელშეკრულება.
-                                  </p>
-                                  <p>
-                                      * სანამ კურსზე დარეგისტრირდები მნიშვნელოვანია, ყურადღებით წაიკითხო კურსის აღწერა, ნახო რას ისწავლი კურსის განმავლობაში და გაიგო გააჩნია თუ არა კურსს დასწრების წინაპირობა. 
-                                  </p>
-                              </div>
-                          </div>
-
-                          <div class="third-section-container-content-bottom-collapse-item">
-                              <div class="collapse-item-question" onclick="collapseHandler('second-question')">
-                                  შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?
-                                  <img alt="arrow-down" src="./assets/icons/arrow-down.svg"/>
-                              </div>
-                              <div id="second-question" class="collapse-content-wrapper">
-                                  <p>TBC X USAID ტექნოლოგიური განათლებისთვის პროგრამაში თითოეულ კანდიდატს აქვს მხოლოდ ერთი კურსის გავლის შესაძლებლობა. გარდა Information Security და Python კურსებისა, სადაც Basic დონის გავლის შემდეგ შესაძლებელია სწავლის გაგრძელება Advance დონეზე.</p>
-                              </div>
-                          </div>
-
-                          <div class="third-section-container-content-bottom-collapse-item">
-                              <div class="collapse-item-question" onclick="collapseHandler('third-question')">
-                                  რა ღირს სწავლა პროგრამის ფარგლებში?
-                                  <img alt="arrow-down" src="./assets/icons/arrow-down.svg"/>
-                              </div>
-                              <div id="third-question" class="collapse-content-wrapper">
-                                  <p>პროგრამის ფარგლებში კურსებზე სწავლა სრულიად დაფინანსებულია თიბისი ბანკისა და USAID-ის მიერ.</p>
-                              </div>
-                          </div>
+                    <div
+                      class="third-section-container-content-bottom-collapse-item"
+                    >
+                      <div
+                        class="collapse-item-question"
+                        onclick="collapseHandler('second-question')"
+                      >
+                        შემიძლია თუ არა ერთზე მეტ კურსზე რეგისტრაცია?
+                        <img
+                          alt="arrow-down"
+                          src="./assets/icons/arrow-down.svg"
+                        />
                       </div>
+                      <div
+                        id="second-question"
+                        class="collapse-content-wrapper"
+                      >
+                        <p>
+                          TBC X USAID ტექნოლოგიური განათლებისთვის პროგრამაში
+                          თითოეულ კანდიდატს აქვს მხოლოდ ერთი კურსის გავლის
+                          შესაძლებლობა. გარდა Information Security და Python
+                          კურსებისა, სადაც Basic დონის გავლის შემდეგ
+                          შესაძლებელია სწავლის გაგრძელება Advance დონეზე.
+                        </p>
+                      </div>
+                    </div>
+
+                    <div
+                      class="third-section-container-content-bottom-collapse-item"
+                    >
+                      <div
+                        class="collapse-item-question"
+                        onclick="collapseHandler('third-question')"
+                      >
+                        რა ღირს სწავლა პროგრამის ფარგლებში?
+                        <img
+                          alt="arrow-down"
+                          src="./assets/icons/arrow-down.svg"
+                        />
+                      </div>
+                      <div id="third-question" class="collapse-content-wrapper">
+                        <p>
+                          პროგრამის ფარგლებში კურსებზე სწავლა სრულიად
+                          დაფინანსებულია თიბისი ბანკისა და USAID-ის მიერ.
+                        </p>
+                      </div>
+                    </div>
                   </div>
                 </div>
+              </div>
             </div>
           </div>
         </section>
-        
-    <footer id="footer" class="footer-container">
+      </main>
+
+      <footer id="footer" class="footer-container">
         <div class="footer-container-content">
-            <div class="footer-container-content-top content-width">
-                <img 
-                class="footer-container-content-top-left"
-                alt="tbc-logo"
-                src="https://static.wixstatic.com/media/dd97f4_86c58c47370442a889e9a4e9db4eb00c~mv2.png/v1/crop/x_1,y_0,w_426,h_123/fill/w_133,h_38,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%201%402x.png"
+          <div class="footer-container-content-top content-width">
+            <img
+              class="footer-container-content-top-left"
+              alt="tbc-logo"
+              src="https://static.wixstatic.com/media/dd97f4_86c58c47370442a889e9a4e9db4eb00c~mv2.png/v1/crop/x_1,y_0,w_426,h_123/fill/w_133,h_38,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Asset%201%402x.png"
+            />
+            <div class="footer-container-content-top-right">
+              <div class="footer-container-content-top-right-socmedia">
+                <img
+                  alt="facebook-logo"
+                  src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ce6ec7c11b174c0581e20f42bb865ce3.png"
                 />
-                <div class="footer-container-content-top-right">
-                  <div class="footer-container-content-top-right-socmedia">
-                      <img 
-                      alt="facebook-logo"
-                      src="https://static.wixstatic.com/media/ce6ec7c11b174c0581e20f42bb865ce3.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/ce6ec7c11b174c0581e20f42bb865ce3.png"
-                      />
-                      <img 
-                      alt="youtube-logo"
-                      src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/71ac09a5a92848cc943bf2ca2a09a6d0.png"
-                      />
-                  </div>
-                </div>
-            </div>
-
-            <div class="footer-container-content-bottom-wrapper">
-              <div class="footer-container-content-copyright">
-                  <span class="content-width">
-                      &copy;2023 ყველა უფლება დაცულია
-                  </span>
-              </div>
-
-              <div class="footer-container-content-bottom content-width">
-                  <div class="footer-container-content-bottom-actions">
-                      <a href="#">წესები და პირობები</a>
-                      <button id="contact-us" type="button">მოგვწერეთ</button>
-                  </div>
+                <img
+                  alt="youtube-logo"
+                  src="https://static.wixstatic.com/media/71ac09a5a92848cc943bf2ca2a09a6d0.png/v1/fill/w_49,h_49,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/71ac09a5a92848cc943bf2ca2a09a6d0.png"
+                />
               </div>
             </div>
+          </div>
+
+          <div class="footer-container-content-bottom-wrapper">
+            <div class="footer-container-content-copyright">
+              <span class="content-width">
+                &copy;2023 ყველა უფლება დაცულია
+              </span>
+            </div>
+
+            <div class="footer-container-content-bottom content-width">
+              <div class="footer-container-content-bottom-actions">
+                <a href="#">წესები და პირობები</a>
+                <button id="contact-us" type="button">მოგვწერეთ</button>
+              </div>
+            </div>
+          </div>
         </div>
-    </footer>
-  </div>
+      </footer>
+    </div>
 
     <script src="index.js"></script>
   </body>
