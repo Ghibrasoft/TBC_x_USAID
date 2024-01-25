@@ -44,6 +44,7 @@ function menuSidebarHandler() {
   function toggleSidebar() {
     const isOpen = sidebarWrapper.classList.toggle("show-sidebar");
     sidebarOverlay.classList.toggle("show-overlay", isOpen);
+    document.body.classList.toggle("disable-scroll", isOpen);
   }
 
   function toggleAnimationClasses() {

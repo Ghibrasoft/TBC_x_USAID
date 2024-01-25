@@ -53,6 +53,7 @@
   width: var(--burger-menu-width);
   height: var(--burger-menu-height);
   transition: all 0.5s;
+  z-index: 7;
 }
 .burger-menu .burger-menu-lines {
   cursor: pointer;

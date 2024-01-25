@@ -21,6 +21,10 @@ body {
   color: var(--color-text-base);
   background-color: var(--color-bg-base);
 }
+/* onOpen sidebar */
+.disable-scroll {
+  overflow: hidden;
+}
 
 .container {
   position: relative;
@@ -89,7 +93,7 @@ body {
   padding: var(--space-4xl) 0;
   transition: 0.5s ease-out;
   background-color: var(--color-bg-sidebar);
-  z-index: 3;
+  z-index: 5;
 }
 
 .sidebar {
@@ -103,11 +107,11 @@ body {
 }
 
 .sidebar li a {
-  font-size: var(--font-size-m);
+  font-size: var(--font-size-s);
 }
 
 .sidebar-overlay {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -116,7 +120,7 @@ body {
   visibility: hidden;
   background-color: var(--color-bg-overlay);
   transition: 0.3s ease-in;
-  z-index: 2;
+  z-index: 3;
 }
 .show-overlay {
   visibility: visible;

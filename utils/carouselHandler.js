@@ -57,7 +57,7 @@ function carouselHandler() {
 
           document
             .querySelector(".controls .selected-dot")
-            .classList.remove("selected-dot");
+            .classList.toggle("selected-dot"); // rem
 
           if (windowWidth > 768) {
             slider.children[slideIndex].style.zIndex = 1;
@@ -71,7 +71,7 @@ function carouselHandler() {
           dot.addEventListener("click", () => {
             slideIndex = index;
             setIndexHandler();
-            dot.classList.add("selected-dot");
+            dot.classList.toggle("selected-dot"); // add
           });
         });
 
@@ -81,9 +81,9 @@ function carouselHandler() {
 
             document
               .querySelector(".controls .selected-dot")
-              .classList.remove("selected-dot");
+              .classList.toggle("selected-dot"); // rem
             slideIndex = slideIndex < slidesCount ? slideIndex + 1 : 0;
-            dotParent.children[slideIndex].classList.add("selected-dot");
+            dotParent.children[slideIndex].classList.toggle("selected-dot"); // add
 
             if (windowWidth > 768) {
               slider.children[slideIndex].style.zIndex = 1;
@@ -95,30 +95,34 @@ function carouselHandler() {
         };
         startAnimating();
 
+        const goToNextSlide = () => {
+          resetStyles();
+          slideIndex = slideIndex < slidesCount ? slideIndex + 1 : 0;
+          setIndexHandler();
+          dotParent.children[slideIndex].classList.toggle("selected-dot"); // add
+          slider.children[slideIndex].style.zIndex = 1;
+          slider.children[slideIndex].style.opacity = 1;
+        };
+
+        const goToPrevSlide = () => {
+          resetStyles();
+          slideIndex = slideIndex > 0 ? slideIndex - 1 : slidesCount;
+          setIndexHandler();
+          dotParent.children[slideIndex].classList.toggle("selected-dot"); // add
+          slider.children[slideIndex].style.zIndex = 1;
+          slider.children[slideIndex].style.opacity = 1;
+        };
+
         carousel.addEventListener("mouseover", () => {
           clearInterval(intervalId);
         });
+
         carousel.addEventListener("mouseout", () => {
           startAnimating();
         });
 
-        leftArrow.addEventListener("click", () => {
-          resetStyles();
-          slideIndex = slideIndex > 0 ? slideIndex - 1 : 0;
-          setIndexHandler();
-          dotParent.children[slideIndex].classList.add("selected-dot");
-          slider.children[slideIndex].style.zIndex = 1;
-          slider.children[slideIndex].style.opacity = 1;
-        });
-
-        rightArrow.addEventListener("click", () => {
-          resetStyles();
-          slideIndex = slideIndex < slidesCount ? slideIndex + 1 : slidesCount;
-          setIndexHandler();
-          dotParent.children[slideIndex].classList.add("selected-dot");
-          slider.children[slideIndex].style.zIndex = 1;
-          slider.children[slideIndex].style.opacity = 1;
-        });
+        leftArrow.addEventListener("click", goToPrevSlide);
+        rightArrow.addEventListener("click", goToNextSlide);
       })
       .catch((error) => console.error("Error fetching partners:", error));
   });
