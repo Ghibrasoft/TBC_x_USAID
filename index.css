@@ -265,7 +265,41 @@ body {
     padding: var(--space-xs) var(--space-s);
   }
 
+  .carousel-wrapper {
+    width: 90%;
+    margin: 0px auto;
+    padding: var(--space-m) 0;
+  }
+  .carousel {
+    width: auto;
+    position: relative;
+    overflow: hidden;
+    padding: var(--space-xs) 0;
+  }
+  .slider {
+    display: flex;
+    transition: transform 0.7s ease-in;
+  }
+  .slider .cards-container {
+    position: static;
+    top: auto;
+    left: auto;
+    width: auto;
+    height: auto;
+    flex: 0 0 100%;
+    gap: var(--space-3xl);
+    padding: var(--space-m);
+    opacity: 1;
+    z-index: auto;
+  }
   .controls .arrow {
     display: none;
+  }
+  .controls ul {
+    gap: var(--space-m);
+  }
+  .controls ul li {
+    width: var(--dot-size-m);
+    height: var(--dot-size-m);
   }
 }

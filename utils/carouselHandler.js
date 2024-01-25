@@ -1,3 +1,5 @@
+import { windowWidth } from "./windowWidth.js";
+
 function carouselHandler() {
   document.addEventListener("DOMContentLoaded", () => {
     fetch("./db/carousel-data.json")
@@ -51,12 +53,18 @@ function carouselHandler() {
         };
 
         const setIndexHandler = () => {
-          resetStyles();
+          windowWidth > 768 && resetStyles();
+
           document
             .querySelector(".controls .selected-dot")
             .classList.remove("selected-dot");
-          slider.children[slideIndex].style.zIndex = 1;
-          slider.children[slideIndex].style.opacity = 1;
+
+          if (windowWidth > 768) {
+            slider.children[slideIndex].style.zIndex = 1;
+            slider.children[slideIndex].style.opacity = 1;
+          } else {
+            slider.style.transform = "translate(" + slideIndex * -100 + "%)";
+          }
         };
 
         document.querySelectorAll(".controls li").forEach((dot, index) => {
@@ -69,14 +77,20 @@ function carouselHandler() {
 
         const startAnimating = () => {
           intervalId = setInterval(() => {
-            resetStyles();
+            windowWidth > 768 && resetStyles();
+
             document
               .querySelector(".controls .selected-dot")
               .classList.remove("selected-dot");
             slideIndex = slideIndex < slidesCount ? slideIndex + 1 : 0;
             dotParent.children[slideIndex].classList.add("selected-dot");
-            slider.children[slideIndex].style.zIndex = 1;
-            slider.children[slideIndex].style.opacity = 1;
+
+            if (windowWidth > 768) {
+              slider.children[slideIndex].style.zIndex = 1;
+              slider.children[slideIndex].style.opacity = 1;
+            } else {
+              slider.style.transform = "translate(" + slideIndex * -100 + "%)";
+            }
           }, slideInterval);
         };
         startAnimating();
