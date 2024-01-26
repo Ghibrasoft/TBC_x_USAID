@@ -55,9 +55,6 @@
   gap: var(--space-2xl);
   padding: var(--space-4xl) 0;
 }
-.first-section-container .first-section-bottom .first-section-bottom-content a {
-  width: fit-content;
-}
 .first-section-container
   .first-section-bottom
   .first-section-bottom-content

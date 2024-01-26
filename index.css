@@ -211,11 +211,11 @@ body {
   background-color: var(--color-text-base);
 }
 
-/* anchor tag */
+/* anchor tags */
 #all-questions {
   text-decoration: none;
   color: var(--color-link);
-  font-size: var(--font-size-l);
+  font-size: var(--font-size-m);
   font-weight: bold;
   transition: color 0.2s ease-in;
 }
@@ -227,7 +227,10 @@ body {
   flex-direction: column;
   align-items: center;
 }
-
+#see-more {
+  width: fit-content;
+  font-size: var(--font-size-m);
+}
 /* button tag */
 #contact-us {
   cursor: pointer;
@@ -261,8 +264,7 @@ body {
 @media screen and (max-width: 768px) {
   #all-questions {
     margin: var(--space-3xl) 0;
-    font-weight: lighter;
-    font-size: var(--font-size-m);
+    font-weight: bold;
   }
 
   #contact-us {
