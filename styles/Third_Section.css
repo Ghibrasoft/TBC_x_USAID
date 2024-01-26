@@ -1,7 +1,4 @@
 .third-section-container {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* align-items: center; */
   overflow: hidden;
 }
 /* top content */
@@ -20,7 +17,7 @@
   .third-section-container-content
   .third-section-container-content-top
   .third-section-container-content-top-title {
-  font-size: var(--font-size-xl);
+  font-size: var(--font-size-l);
   font-weight: lighter;
 }
 
