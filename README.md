@@ -30,6 +30,8 @@
    Javascript - დინამიური და ინტერაქტიული ფუნქციონალისთვის
 ---
 ### 3. ინსტრუქცია თუ როგორ უნდა გაუშვა პროექტი
+   git clone 'repo link' > გადადით პროექტის დირექტორიაში  >
+      
       npm install 
       npm install -g http-server
       npm start
