@@ -8,11 +8,19 @@ function carouselHandler() {
         const slider = document.querySelector(".slider");
         let articlesCounter = 0;
 
-        data.forEach((partner) => {
+        data.forEach((partner, index) => {
           if (articlesCounter === 0) {
             const cardContainer = document.createElement("div");
             cardContainer.classList.add("cards-container");
+            const controls = document.querySelector(".controls ul.dots");
             slider.appendChild(cardContainer);
+
+            // dynamically create quantity of control dots
+            const dot = document.createElement("li");
+            if (index === 0) {
+              dot.classList.add("selected-dot");
+            }
+            controls.appendChild(dot);
           }
 
           const cardContainers = document.querySelectorAll(".cards-container");
